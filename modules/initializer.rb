@@ -1,8 +1,8 @@
-require './models/product.rb'
-require './models/checkout.rb'
-require './models/promotion_rule.rb'
-require './models/promotions.rb'
-require './models/test.rb'
+require './classes/product.rb'
+require './classes/checkout.rb'
+require './classes/promotion_rule.rb'
+require './classes/promotions.rb'
+require './classes/test.rb'
 
 require './modules/basket.rb'
 
