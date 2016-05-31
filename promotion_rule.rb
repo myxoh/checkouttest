@@ -23,11 +23,10 @@ class PromotionRule
   def same_item basket = [], current_total = 0 #Calculates amount of discount relevant
                                                # when there are more than X products of type
                                                # Y in the basket
-    puts "Running same_item on item #{@rules[:product]}"
     rule_product = @rules[:product]
-    instances_of_product = basket.select{|basket_product| rule_product.code == basket_product}
+    instances_of_product = basket.select{|basket_product| rule_product.code == basket_product.code}
     if instances_of_product.length >= @rules[:from_products]
-      discounted_products = instances_of_product - @rules[:from_products] + 1
+      discounted_products = instances_of_product.length
       discounted_products * (rule_product.price - @rules[:new_price])
     else
       0

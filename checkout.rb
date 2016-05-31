@@ -10,6 +10,6 @@ class Checkout
   end
 
   def total
-    total = @promotion_rules.total @basket
+    total = (@promotion_rules.total @basket).round(2)
   end
 end
