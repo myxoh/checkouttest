@@ -1,4 +1,4 @@
-require './initializer.rb'
+require './modules/initializer.rb'
 load_products   # List products in initializer # load_products provides @items array with the items
 promotional_rules = load_promotions # Set promotions in initializer #load_promotions
 

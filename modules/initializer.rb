@@ -1,9 +1,10 @@
-require './product.rb'
-require './checkout.rb'
-require './basket.rb'
-require './promotion_rule.rb'
-require './promotions.rb'
-require './test.rb'
+require './models/product.rb'
+require './models/checkout.rb'
+require './models/promotion_rule.rb'
+require './models/promotions.rb'
+require './models/test.rb'
+
+require './modules/basket.rb'
 
 def load_products
   @items = []
