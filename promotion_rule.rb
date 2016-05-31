@@ -23,6 +23,7 @@ class PromotionRule
   def same_item basket = [], current_total = 0 #Calculates amount of discount relevant
                                                # when there are more than X products of type
                                                # Y in the basket
+    puts "Running same_item on item #{@rules[:product]}"
     rule_product = @rules[:product]
     instances_of_product = basket.select{|basket_product| rule_product.code == basket_product}
     if instances_of_product.length >= @rules[:from_products]
@@ -36,6 +37,7 @@ class PromotionRule
   def over_total basket = [], current_total = 0 #Calculares the amount of discount relevant
                                                 #When the user has already spent more than
                                                 #X on the checkout.
+    #puts "Running over_total on current_total #{current_total} with min total #{@rules[:minimum_total]}"
     if current_total > @rules[:minimum_total]
       current_total * (@rules[:discount_percentage]*1.0/100)
     else

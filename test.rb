@@ -10,12 +10,14 @@ class Test
     @items.each do |item|
       co.scan item
     end
-
-    if co.total == @should_equal
+    total = co.total
+    if total == @should_equal
       puts "Test was successfull"
     else
-      puts "Test with items #{@items} returned #{co.total} instead of #{@should_equal}"
+      puts "Test with items #{@items} \n
+      and rules #{@promotional_rules.promotions} \n
+       returned #{total} instead of #{@should_equal}"
     end
-    co.total == @should_equal
+    total == @should_equal
   end
 end
