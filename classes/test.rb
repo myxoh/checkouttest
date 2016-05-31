@@ -6,7 +6,7 @@ class Test
   end
 
   def run
-    co = Checkout.new @promotional_rules
+    co = Checkout.new(@promotional_rules)
     @items.each do |item|
       co.scan item
     end
