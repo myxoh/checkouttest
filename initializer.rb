@@ -3,6 +3,7 @@ require './checkout.rb'
 require './basket.rb'
 require './promotion_rule.rb'
 require './promotions.rb'
+require './test.rb'
 
 def load_products
   @items = []
