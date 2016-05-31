@@ -1,7 +1,9 @@
 class Checkout
+  #Provides a container for a Basket, has a set of promotional_rules
+  #Returns the total once the promotions are calculated using a method "total" on promotional_rules
 
-  def initialize promotion_rules = nil, *basket
-    @promotion_rules = promotion_rules
+  def initialize promotional_rules = nil, *basket
+    @promotion_rules = promotional_rules
     @basket = basket
   end
 

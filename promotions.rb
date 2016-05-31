@@ -1,4 +1,6 @@
 class Promotions
+  #List promotions and calculate the total for a provided basket with the set of promotions defined
+
   def initialize *promotions
     @promotions = promotions.sort{|promotion, next_promotion| promotion.order <=> next_promotion.order}
   end

@@ -1,4 +1,12 @@
 class PromotionRule
+  #Types:
+  # :same_type (Arguments required:  :product (Product), :from_products (Integer positive), :new_price (Float positive))
+  #   Drops the price for all the products of type :product when there are over :from_products
+  #   return the discount equivalent to changing to the :new_price
+
+  # :over_total (Arguments required: :minimum_total (Integer positive), :discount percentage (Integer from 0..100))
+  #   Applies a discount on the total on orders over :minimum_total of the current_total * :discount_percentage
+
   def initialize type, rules = {}
     permitted_rules = [:same_item, :over_total]
     raise TypeException, 'Invalid rule type' unless permitted_rules.include? type
